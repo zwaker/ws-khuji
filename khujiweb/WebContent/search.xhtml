@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  manifest="" lang="en-US" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html">
+ 	
+<h:head>
+    <meta charset="UTF-8"></meta>
+    <title>GS</title>
+</h:head>
+<h:body>
+<h:form>
+    <h:inputText id="keywords" value="#{searchJobManager.searchJobCriteria.keywords}"></h:inputText>
+    
+    <h:selectOneMenu id="classificationType" value="#{searchJobManager.searchJobCriteria.classificationOrIndustryType}">
+    <f:selectItems value="#{searchJobManager.searchJobCriteria.classificationOrIndustryTypeList}" 
+    var="c" itemLabel="#{c.classificationOrIndustryTypeName}" itemValue="#{c.classificationOrIndustryTypeName}"/>
+    </h:selectOneMenu>
+    
+    <h:selectOneMenu id="subClassificationType" value="#{searchJobManager.searchJobCriteria.subClassificationOrIndustryType}">
+    <f:selectItems value="#{searchJobManager.searchJobCriteria.subClassificationOrIndustryTypeList}"
+    var="c" itemLabel="#{c.subClassificationOrIndustryTypeName}" itemValue="#{c.subClassificationOrIndustryTypeName}"/>
+    </h:selectOneMenu>
+    
+    
+</h:form>
+</h:body>
+</html>

@@ -1,0 +1,70 @@
+package com.iphonewebservice;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class SearchJobCriteria {
+
+	private String keywords;
+	private String classificationOrIndustryType;
+	private String subClassificationOrIndustryType;
+	private List<ClassificationOrIndustryType> classificationOrIndustryTypeList;
+	private List<SubClassificationOrIndustryType> subClassificationOrIndustryTypeList;
+	private String cityName;
+	public String getKeywords() {
+		keywords="SSSS";
+		return keywords;
+	}
+	public void setKeywords(String keywords) {
+		
+		this.keywords = keywords;
+	}
+	public String getClassificationOrIndustryType() {
+		
+		return classificationOrIndustryType;
+	}
+	public void setClassificationOrIndustryType(String classificationOrIndustryType) {
+		this.classificationOrIndustryType = classificationOrIndustryType;
+	}
+	public String getSubClassificationOrIndustryType() {
+		return subClassificationOrIndustryType;
+	}
+	public void setSubClassificationOrIndustryType(
+			String subClassificationOrIndustryType) {
+		this.subClassificationOrIndustryType = subClassificationOrIndustryType;
+	}
+	public String getCityName() {
+		return cityName;
+	}
+	public void setCityName(String cityName) {
+		this.cityName = cityName;
+	}
+	public List<ClassificationOrIndustryType> getClassificationOrIndustryTypeList() {
+		List<ClassificationOrIndustryType> x = new ArrayList<ClassificationOrIndustryType>();
+		ClassificationOrIndustryType ci = new ClassificationOrIndustryType();
+		ci.setClassificationOrIndustryTypeName("First");
+		x.add(ci);
+		
+		classificationOrIndustryTypeList=x;
+		return classificationOrIndustryTypeList;
+	}
+	public void setClassificationOrIndustryTypeList(
+			List classificationOrIndustryTypeList) {
+		this.classificationOrIndustryTypeList = classificationOrIndustryTypeList;
+	}
+	public List<SubClassificationOrIndustryType> getSubClassificationOrIndustryTypeList() {
+		List<SubClassificationOrIndustryType> x = new ArrayList<SubClassificationOrIndustryType>();
+		SubClassificationOrIndustryType ci = new SubClassificationOrIndustryType();
+		ci.setSubClassificationOrIndustryTypeName("First");
+		x.add(ci);		
+		subClassificationOrIndustryTypeList=x;
+		return subClassificationOrIndustryTypeList;
+	}
+	public void setSubClassificationOrIndustryTypeList(
+			List subClassificationOrIndustryTypeList) {
+		this.subClassificationOrIndustryTypeList = subClassificationOrIndustryTypeList;
+	}
+	
+	
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="khujiear">
+        <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
+        <dependent-module archiveName="khujiweb.war" deploy-path="/" handle="module:/resource/khujiweb/khujiweb">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="khujiejb.jar" deploy-path="/" handle="module:/resource/khujiejb/khujiejb">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cglib-2.2.jar" deploy-path="/lib" handle="module:/classpath/lib//Users/ARSHIRSHAN/Documents/ws-sencha-tictoc-3/tictocear/lib/cglib-2.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="dom4j-1.6.1.jar" deploy-path="/lib" handle="module:/classpath/lib//Users/ARSHIRSHAN/Documents/ws-sencha-tictoc-3/tictocear/lib/dom4j-1.6.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jta-1.1.jar" deploy-path="/lib" handle="module:/classpath/lib//Users/ARSHIRSHAN/Documents/ws-sencha-tictoc-3/tictocear/lib/jta-1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

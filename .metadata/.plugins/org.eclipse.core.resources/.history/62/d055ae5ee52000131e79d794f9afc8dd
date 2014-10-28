@@ -1,0 +1,100 @@
+package com.iphoneservice.iintel.entity;
+
+import java.io.Serializable;
+import javax.persistence.*;
+
+
+/**
+ * The persistent class for the KHUJI_JOB_ITEM database table.
+ * 
+ */
+@Entity
+@Table(name="KHUJI_JOB_ITEM")
+public class KhujiJobItem implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int id;
+
+	@Column(name="ADDRESS_ID")
+	private String addressId;
+
+	@Column(name="JOB_ADVERTISEMENT_DATE")
+	private String jobAdvertisementDate;
+
+    @Lob()
+	@Column(name="JOB_DESCRIPTION_PARTA")
+	private String jobDescriptionParta;
+
+    @Lob()
+	@Column(name="JOB_DESCRIPTION_PARTB")
+	private String jobDescriptionPartb;
+
+    @Lob()
+	@Column(name="JOB_HEADER_IMAGE")
+	private byte[] jobHeaderImage;
+
+	@Column(name="JOB_TITLE")
+	private String jobTitle;
+
+    public KhujiJobItem() {
+    }
+
+	public int getId() {
+		return this.id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getAddressId() {
+		return this.addressId;
+	}
+
+	public void setAddressId(String addressId) {
+		this.addressId = addressId;
+	}
+
+	public String getJobAdvertisementDate() {
+		return this.jobAdvertisementDate;
+	}
+
+	public void setJobAdvertisementDate(String jobAdvertisementDate) {
+		this.jobAdvertisementDate = jobAdvertisementDate;
+	}
+
+	public String getJobDescriptionParta() {
+		return this.jobDescriptionParta;
+	}
+
+	public void setJobDescriptionParta(String jobDescriptionParta) {
+		this.jobDescriptionParta = jobDescriptionParta;
+	}
+
+	public String getJobDescriptionPartb() {
+		return this.jobDescriptionPartb;
+	}
+
+	public void setJobDescriptionPartb(String jobDescriptionPartb) {
+		this.jobDescriptionPartb = jobDescriptionPartb;
+	}
+
+	public byte[] getJobHeaderImage() {
+		return this.jobHeaderImage;
+	}
+
+	public void setJobHeaderImage(byte[] jobHeaderImage) {
+		this.jobHeaderImage = jobHeaderImage;
+	}
+
+	public String getJobTitle() {
+		return this.jobTitle;
+	}
+
+	public void setJobTitle(String jobTitle) {
+		this.jobTitle = jobTitle;
+	}
+
+}

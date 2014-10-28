@@ -1,0 +1,52 @@
+/**
+ * 
+ */
+package com.iphoneservice.khuji;
+
+import java.util.List;
+
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import org.hibernate.Session;
+import org.hibernate.criterion.Property;
+
+import com.iphoneservice.khuji.bean.SearchJobCriteria;
+import com.iphoneservice.khuji.entity.KhujiCompany;
+import com.iphoneservice.khuji.entity.KhujiJobItem;
+import com.iphoneservice.khuji.entity.Location;
+
+/**
+ * @author przaca
+ * 
+ */
+
+@LocalBean
+@Stateless
+public class SearchJobManagerService {
+	@PersistenceContext(unitName = "mypersistence")
+	private EntityManager em;
+
+	public Location findJobs(SearchJobCriteria searchCriteria) {
+		// em.
+		Session session = ((org.hibernate.ejb.EntityManagerImpl) em
+				.getDelegate()).getSession();
+
+		List<Location> itemList = session.createCriteria(KhujiJobItem.class)
+				.add(Property.forName("name").eq("S")).list();
+
+		if (itemList!=null && itemList.size()>0) {
+			return itemList.get(0);
+		} else {
+			Location tempLoc=new Location();
+			tempLoc.setId(-1);
+			tempLoc.setName("No Record");
+			return tempLoc;
+			
+		}
+
+	}
+
+}
